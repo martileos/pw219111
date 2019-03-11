@@ -24,6 +24,11 @@ header nav ul li{
 	padding-bottom: 2px;
 	/*text-decoration: underline;*/
 }
+#bgoffer{
+	left: -35px;
+	position: relative;
+	top: -410px;
+}
 #granthams{
 	margin-left: 25px;
 	margin-top:  25px;	
@@ -31,8 +36,49 @@ header nav ul li{
 #paint{
 	float: right;
 }
-
-
+#primerSeccion{
+	/*border: 1px solid red;*/
+	height: 318px;
+	margin-top: 60px;
+}
+#primerSeccion article{
+	/*border: 1px solid blue;*/
+	display: inline-block;
+	vertical-align: top;
+}
+#secc01art01{
+	margin-left: 30px;
+	width: 60%;
+}
+#secc01art02{
+	margin-left: 50px;
+	/*padding-left: 50px;*/
+	width: 30%;
+}
+#secc01art02 ul{
+	list-style: none;
+	margin-left: -40px;
+}
+#secc01art02 ul li:before{
+	content: "• ";
+	color: #FF0099;
+}
+#segundaSeccion article{
+	padding-right: 122px;
+	text-align: right;
+}
+.colorrosa{
+	color: #FF0099;
+}
+.letragrande{
+	font-size: 3.5em;
+}
+.letramediana{
+	font-size: 2em;
+}
+.nito{
+	font-weight: bold;
+}
 
 
 
