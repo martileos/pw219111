@@ -5,6 +5,12 @@ body{
 	min-width: 1078px;
 	max-width: 1078px;
 }
+footer{
+	border-top: 3px solid lightgray;
+	color: white;
+	background: #4d70ba;
+	padding-left: 20px;
+}
 header input{
 	float: right;
 	margin-right: -250px;
@@ -63,9 +69,36 @@ header nav ul li{
 	content: "• ";
 	color: #FF0099;
 }
+#secc03art04{
+	/*border: 1px solid red;*/
+	/*margin-top: 40px;*/
+	padding-left: 25px;
+	padding-top: 40px;
+}
 #segundaSeccion article{
 	padding-right: 122px;
 	text-align: right;
+}
+#terceraSeccion article{
+	display: inline-block;
+	vertical-align: top;
+	width: 23%;
+}
+#terceraSeccion article img{
+	vertical-align: middle;
+}
+#terceraSeccion article input{
+	border-radius: 5px;
+}
+#terceraSeccion article input[type="button"]{
+	background: #8BC500;
+	color: white;
+}
+.colorazul{
+	color: #4267B3;
+}
+.colorverde{
+	color: #8BC500;
 }
 .colorrosa{
 	color: #FF0099;
