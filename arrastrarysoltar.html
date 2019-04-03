@@ -3,10 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Arrastrar y soltar</title>
+	<style>
+		#div1,#div2{
+			float: left;
+			border: 1px solid black;
+			height: 170px;
+			margin: 10px;
+			padding: 10px;
+			width: 100px;
+		}
+	</style>
 </head>
 <body>
 	<h2>Arrastrar y soltar</h2>
-	<div id="div1">
+	<div id="div1" ondragover="allowDrop(event)" ondrop="drop(event)">
 		<img src="img/LOGO_TEC_PNG_OK.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="arrastre1">		
 		<img src="img/LOGO_TEC_PNG_OK.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="arrastre2">		
 		<img src="img/LOGO_TEC_PNG_OK.png" height="31" width="88" draggable="true" ondragstart="drag(event)" id="arrastre3">		
