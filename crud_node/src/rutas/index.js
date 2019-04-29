@@ -6,4 +6,5 @@ const rutas = express.Router();
 rutas.get("/",(req,res) =>{
 	res.send("Hola mundo Node");
 });
+
 module.exports = rutas;
