@@ -1,9 +1,9 @@
-const express = require('express');
 const path = require('path');
+const express = require('express');
 const morgan = require('morgan')
+const mysql = require('mysql'); //sequel
+const myConnection = require('express-myconnection');
 const app = express();
-const mysql = require('mysql');
-const myConnection = require('express-myconnection')
 
 //Importar rutas
 const indiceRutas=require('./rutas/index');
@@ -15,7 +15,12 @@ app.set('views', path.join(__dirname, 'vistas'));
 
 //Middleware (antes de las peticiones de los usuarios (antes de las rutas))
 app.use(morgan('dev'));
-app.use(myConnection(mysql, {
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname,'views'));
+
+//Middleware 
+app.use(morgan('dev')); //dev = desarrollo
+app.use(myConnection(mysql,{
 	host: 'localhost',
 	user: 'root',
 	password: '',
@@ -23,12 +28,22 @@ app.use(myConnection(mysql, {
 	database: 'crudnodejsmysql'
 },'single'));
 
+
 //Usamos las rutas
-app.use('/',indiceRutas);
+app.use('/',indiceRutas); 
 
 //Activar el servidor de escucha
 app.listen(app.get('port'), () => {
 	console.log("Escuchando en puerto 3000");
 });
+
+
+
+
+
+
+
+
+>>>>>>> 5c9263d9cd8f42d14be0d1eb82077ce5156ed7f5
 
 
