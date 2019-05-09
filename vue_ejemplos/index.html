@@ -2,25 +2,37 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Primer ejemplo con VUE</title>
+	<title>Vue ejemplos</title>
 </head>
 <body>
 	<div id="app">
 		<h1>{{ titulo }}</h1>
+		<input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
+		<button @click="agregarFruta">Agregar fruta</button>
 		<ul>
 			<li v-for="fruta of frutas">{{ fruta }}</li>
 		</ul>
 		<ul>
 			<li v-for="fruta of frutas2">
-				{{ fruta.nombre }} - {{ fruta.cantidad }}
-				<span v-if="fruta.cantidad == 0"> - no hay en almacén</span>
+				<!-- {{ fruta.nombre }} - {{ fruta.cantidad }}	 -->
+				<input type="number" v-model.number="fruta.cantidad">
+				{{ fruta.nombre }} 
+				<button @click="fruta.cantidad++"> + </button>
+				<button @click="fruta.cantidad--"> - </button>
+				<span v-if="fruta.cantidad == 0"> no hay en almacén</span>
 			</li>
 		</ul>
+		<h4>Total: {{ sumarFrutas }}</h4>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<script src="js/primervue.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 
 
