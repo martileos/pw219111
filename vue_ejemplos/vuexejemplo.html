@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de Vuex.js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+
+</head>
+<body>
+	<div id="app">
+		<titulo></titulo>
+	</div>
+	<script>
+		//Creamos componentes
+		Vue.component('titulo',{
+			template:
+			`
+				<div>
+					<h1>Número: {{ $store.state.numero }}</h1>
+					<hijo></hijo>
+				</div>
+			`
+		});
+
+		Vue.component('hijo',{
+			template:
+			`
+				<div>
+					<h1>Número: {{ $store.state.numero }}</h1>
+					<button @click="$store.commit('aumentar')"> + </button>
+				</div>
+			`
+		})
+
+		//Creamos el store compartido
+		const store = new Vuex.Store({
+			state:{
+				numero: 10
+			},
+			mutations:{
+				aumentar(state){
+					state.numero++
+				}
+			}
+		});
+		new Vue({
+			el: '#app',
+			store: store
+		})
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
